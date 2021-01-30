@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
 input[type=button] {
     width: 50px !important;
     margin: 5px;
+    box-shadow: none !important;
 }
 
 hr.bg.mb-4.mt-0.d-inline-block.mx-auto {
