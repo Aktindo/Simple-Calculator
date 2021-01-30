@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <link rel="manifest" href="/assets/images/site.webmanifest">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <div class="jumbotron text-center bg-transparent">
+        <img src="/assets/images/simple-calculator-logo.png" alt="Logo" width="150px" height="150px">
+        <h1 class="display-4">Simple Calculator</h1>
+        <p class="lead">This is a really simple calculator, made to solve your mathematical problems.</p>
+        <p class="lead">
+            <a class="btn btn-success btn-lg" href="#calculator" role="button">Start</a>
+        </p>
+    </div>
+    <h2 class="text-center"><i class="fas fa-hand-sparkles"></i> Start by pressing the keys below.</h2>
+    <div class="container" id="calculator">
+        <div class="row justify-content-center g-3">
+            <div class="col-auto">
+                <div class="first-row">
+                    <input type="button" value="C" onclick="clearScreen()" class="btn btn-danger clear">
+                    <input type="text" name="result" class="result" id="result" value="" placeholder="Result" readonly />
+                </div>
+                <div class="second-row">
+                    <input type="button" class="btn btn-warning" value="1" onclick="liveScreen(1)" id="one">
+                    <input type="button" class="btn btn-warning" value="2" onclick="liveScreen(2)" id="two">
+                    <input type="button" class="btn btn-warning" value="3" id="three" onclick="liveScreen(3)">
+                    <input type="button" class="btn btn-info" value="+" onclick="liveScreen('+')">
+                </div>
+                <div class="third-row">
+                    <input type="button" class="btn btn-warning" value="4" id="four" onclick="liveScreen(4)">
+                    <input type="button" class="btn btn-warning" value="5" id="five" onclick="liveScreen(5)">
+                    <input type="button" class="btn btn-warning" value="6" id="six" onclick="liveScreen(6)">
+                    <input type="button" class="btn btn-info" value="-" onclick="liveScreen('-')">
+                </div>
+                <div class="fourth-row">
+                    <input type="button" class="btn btn-warning" value="7" id="seven" onclick="liveScreen(7)">
+                    <input type="button" class="btn btn-warning" value="8" id="eight" onclick="liveScreen(8)">
+                    <input type="button" class="btn btn-warning" value="9" id="nine" onclick="liveScreen(9)">
+                    <input type="button" class="btn btn-info" value="x" onclick="liveScreen('*')">
+                </div>
+                <div class="fifth-row">
+                    <input type="button" class="btn btn-warning" value="/" onclick="liveScreen('/')"> 
+                    <input type="button" class="btn btn-warning" value="0" id="zero" onclick="liveScreen(0)">
+                    <input type="button" class="btn btn-warning" value="." class="dot" onclick="liveScreen('.')">
+                    <input type="button" class="btn btn-success" value="=" onclick="result.value = eval(result.value)">
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="page-footer">
+        <div class="bg bg-success">
+            <div class="container">
+                <div class="row py-4 d-flex align-items-center">
+                    <div class="col-md-12 text-center">
+                        <a href="/">
+                            <i class="fab fa-github text-white mr-4"> 
+                            </i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center text-md-left mt-5">
+            <div class="row">
+                <div class="col-md-6 mx-auto mb-4">
+                    <h4 class="text-uppercase font-weight-bold"><img src="../assets/images/simple-calculator-logo.png" width="50px" height="50px">Simple Calculator</h4>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright text-center py-3">
+            <p>Copyright &copy; 2021 Simple Calculator</p>
+            <p>
+                <i class="fas fa-code"></i>
+                Designed by Aktindo
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/e513b21ba7.js" crossorigin="anonymous"></script>
+    <script src="../assets/js/script.js"></script>
+</body>
+</html>
